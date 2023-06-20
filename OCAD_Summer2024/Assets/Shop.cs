@@ -41,6 +41,8 @@ public class Shop
         if (stock.Quantity > 0 && pc.Gold >= stock.Cost)
         {
             pc.Gold -= stock.Cost;
+            //update the UI too
+            pc.UpdateGoldText();
             pc.inventory.Add(stock.Resource, 1);
             stock.Quantity -= 1;
 

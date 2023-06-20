@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 using TMPro;
 
@@ -14,6 +15,8 @@ public class PlayerController : MonoBehaviour
     public int Gold = 100;
     public Inventory inventory;
     public float CurrentResources;
+
+    public GameObject goldText;
     //public float MaxResources = 500.0f;
 
 
@@ -39,6 +42,9 @@ public class PlayerController : MonoBehaviour
         else Destroy(this.gameObject);        
 
         rb = GetComponent<Rigidbody>();
+
+        //set UI text
+        UpdateGoldText();
     }
 
     // Update is called once per frame
@@ -128,5 +134,10 @@ public class PlayerController : MonoBehaviour
 
             target = null;
         }
+    }
+
+    public void UpdateGoldText()
+    {
+        goldText.GetComponent<TMP_Text>().text = Gold.ToString();
     }
 }

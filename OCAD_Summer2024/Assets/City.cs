@@ -15,6 +15,11 @@ public class City : Interactable
     [Header("Shop")]
     public Shop CityShop;
 
+    [Header("Level Up Visuals")]
+    public GameObject level2Upgrade;
+
+  
+
     public void Deposit(PlayerController pc, Item item)
     {       
         // If the city upgrade requirement has been met, don't consume more items
@@ -67,6 +72,29 @@ public class City : Interactable
         CityLevel++;
 
         // TODO: Update shop based on level
+
+        //for now this is it. but can include a switch case to change appearance based on which level it is perhaps.
+        level2Upgrade.SetActive(true);
+
+        //just change the color for level 3, level 4
+        switch (CityLevel)
+        {
+            case 3: //green?
+                {
+                    level2Upgrade.GetComponent<Renderer>().material.color = Color.green;
+                    break;
+                }
+            case 4: //yellow?
+                {
+                    level2Upgrade.GetComponent<Renderer>().material.color = Color.yellow;
+                    break;
+                }
+            default:
+                break;
+        }
+        
+
+        //add visual indication
 
         // TODO: Update upgrade requirements based on level
 
