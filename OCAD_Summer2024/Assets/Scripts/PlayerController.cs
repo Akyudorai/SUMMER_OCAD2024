@@ -8,9 +8,14 @@ using TMPro;
 [RequireComponent(typeof(GravityAffected))]
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController Main;
+
     [Header("Resources")]
+    public int Gold = 100;
+    public Inventory inventory;
     public float CurrentResources;
     //public float MaxResources = 500.0f;
+
 
     [Header("UI")]
     public TMP_Text PromptDisplay = null;
@@ -25,8 +30,14 @@ public class PlayerController : MonoBehaviour
     public float f_AirFrictionForce = 100.0f;
     [Range(0, 25)] public float MaxSpeed = 10.0f;
 
+    [Header("Interactable")]
+    public Interactable target = null;
+
     private void Awake()
     {
+        if (Main == null) Main = this;        
+        else Destroy(this.gameObject);        
+
         rb = GetComponent<Rigidbody>();
     }
 
@@ -37,6 +48,13 @@ public class PlayerController : MonoBehaviour
         Jump();
 
         SpeedLimiter();
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            target.Interact(this);
+            PromptDisplay.text = "";
+            PromptDisplay.enabled = false;
+        }
     }
 
     private void SpeedLimiter()
@@ -87,20 +105,14 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Interactable")
+        if (other.tag == "Interactable" && target == null)
         {
             if (!PromptDisplay.enabled) {
                 PromptDisplay.text = "'E' to Interact";
                 PromptDisplay.enabled = true;
             }
-            
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                other.GetComponent<Interactable>().Interact(this);
-                PromptDisplay.text = "";
-                PromptDisplay.enabled = false;
-            }
-            
+
+            target = other.GetComponent<Interactable>();                                  
         }
     }
 
@@ -113,6 +125,8 @@ public class PlayerController : MonoBehaviour
                 PromptDisplay.text = "";
                 PromptDisplay.enabled = false;
             }
+
+            target = null;
         }
     }
 }

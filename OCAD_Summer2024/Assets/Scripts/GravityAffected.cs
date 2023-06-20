@@ -11,7 +11,7 @@ public class GravityAffected : MonoBehaviour
     [HideInInspector] public float AttractionStrength, Distance;
     public bool Grounded = false;
 
-    [HideInInspector] public GravityField CurrentGravityTarget;
+    public GravityField CurrentGravityTarget;
 
     void Update()
     {
@@ -26,11 +26,17 @@ public class GravityAffected : MonoBehaviour
         // If we want to make it so that they no longer orient themselves to planet when out of orbit, then we can set CurrentGravityTarget to null and apply a rotational force to the player to keep rotating randomly.
         transform.rotation = Quaternion.FromToRotation(Vector3.up, (transform.position - CurrentGravityTarget.transform.position).normalized);
 
+        // Rotate to correct upwards orientation
+        //Vector3 normal = (CurrentGravityTarget.transform.position - transform.position).normalized;
+        //transform.rotation = Quaternion.FromToRotation(Vector3.up, normal);
+
         // EDIT: Always pulls the target towards the planet, even if we aren't grounded
-        transform.GetComponent<Rigidbody>().AddForce((CurrentGravityTarget.transform.position - transform.position).normalized * AttractionStrength, ForceMode.Force);
-
-
-        if (Grounded) transform.GetComponent<Rigidbody>().velocity *= 0.9f;
+        if (transform.GetComponent<Rigidbody>() != null)
+        {
+            transform.GetComponent<Rigidbody>().AddForce((CurrentGravityTarget.transform.position - transform.position).normalized * AttractionStrength, ForceMode.Force);
+            if (Grounded) transform.GetComponent<Rigidbody>().velocity *= 0.9f;
+        }
+        
     }
 
 
