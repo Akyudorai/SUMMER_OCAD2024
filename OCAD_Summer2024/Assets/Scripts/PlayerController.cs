@@ -56,9 +56,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Motion();
-        Jump();
+        if (InterfaceManager.Instance.DialogueActive) return;
 
+        Motion();        
         SpeedLimiter();
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -117,14 +117,6 @@ public class PlayerController : MonoBehaviour
 
         // Add Movement Force
         rb.AddForce(Vec.normalized * Speed * 2);
-    }
-
-    private void Jump()
-    {
-        if (GetComponent<GravityAffected>().Grounded && Input.GetKeyDown(KeyCode.Space))
-        {
-            rb.AddForce(transform.up * JumpForce);
-        }
     }
 
     private void OnTriggerStay(Collider other)

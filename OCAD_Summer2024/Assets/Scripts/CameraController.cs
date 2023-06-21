@@ -37,6 +37,8 @@ public class CameraController : MonoBehaviour
 
     void LateUpdate()
     {
+        if (InterfaceManager.Instance.DialogueActive) return;
+
         UpdateCamera();
     }
 
