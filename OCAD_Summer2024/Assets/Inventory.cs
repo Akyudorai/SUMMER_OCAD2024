@@ -10,6 +10,11 @@ public class Inventory
     [Header("Inventory")]
     [SerializeField] private List<ItemCount> CurrentInventory = new List<ItemCount>();
 
+    public void Set(List<ItemCount> result)
+    {
+        CurrentInventory = result;
+    }
+
     // Add X items to the inventory
     public void Add(Item item, int count)
     {
