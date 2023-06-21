@@ -28,24 +28,24 @@ public class Delphoria
         switch (i)
         {
             case 1:
-                result.Add(new ItemCount(Item.Stone, 5));
-                result.Add(new ItemCount(Item.Water, 3));
+                result.Add(new ItemCount(Item.Stone, 3));
                 break;
 
             case 2:
-                result.Add(new ItemCount(Item.Wood, 3));
-                result.Add(new ItemCount(Item.Wood, 3));
-                result.Add(new ItemCount(Item.Wood, 3));
+                result.Add(new ItemCount(Item.Stone, 5));
+                result.Add(new ItemCount(Item.Metal, 1));
+                result.Add(new ItemCount(Item.Water, 2));
                 break;
 
             case 3:
                 result.Add(new ItemCount(Item.Metal, 4));
-                result.Add(new ItemCount(Item.Fish, 5));
+                result.Add(new ItemCount(Item.Fish, 3));
+                result.Add(new ItemCount(Item.Clothing, 2));
                 break;
 
             case 4:
                 result.Add(new ItemCount(Item.Weapons, 4));
-                result.Add(new ItemCount(Item.Water, 5));
+                result.Add(new ItemCount(Item.Medicine, 2));
                 break;
         }
 
