@@ -38,9 +38,8 @@ public class Lumina
                 break;
 
             case 3:
-                result.Add(new ItemCount(Item.Glassware, 3));
-                result.Add(new ItemCount(Item.Clothing, 1));
-                result.Add(new ItemCount(Item.Alcohol, 2));
+                result.Add(new ItemCount(Item.Porcelean, 3));
+                result.Add(new ItemCount(Item.Machinery, 1));
                 break;
 
             case 4:
@@ -71,15 +70,14 @@ public class Lumina
             case 3:
                 result.Add(new ShopStock(Item.Stone, 5, 2));
                 result.Add(new ShopStock(Item.Gemstone, 2, 6));
-                result.Add(new ShopStock(Item.Machinery, 5, 6));
+                result.Add(new ShopStock(Item.Glassware, 5, 6));
                 result.Add(new ShopStock(Item.Sails_2, 1, 12));
                 break;
 
             case 4:
                 result.Add(new ShopStock(Item.Stone, 5, 2));
                 result.Add(new ShopStock(Item.Gemstone, 2, 6));
-                result.Add(new ShopStock(Item.Machinery, 5, 6));
-                result.Add(new ShopStock(Item.Circuitry, 5, 8));
+                result.Add(new ShopStock(Item.Glassware, 5, 6));
                 result.Add(new ShopStock(Item.Chemicals, 4, 9));
                 break;
         }

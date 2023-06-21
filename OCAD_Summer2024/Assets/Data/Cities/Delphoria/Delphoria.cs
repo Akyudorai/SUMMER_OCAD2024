@@ -59,7 +59,7 @@ public class Delphoria
         switch (i)
         {
             case 1:
-                result.Add(new ShopStock(Item.Wood, 7, 2));
+                result.Add(new ShopStock(Item.Wood, 8, 2));
                 result.Add(new ShopStock(Item.Meat, 5, 3));
                 break;
 

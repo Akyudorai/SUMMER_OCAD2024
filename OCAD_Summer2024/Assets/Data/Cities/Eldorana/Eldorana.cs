@@ -46,7 +46,7 @@ public class Eldorana
 
             case 4:
                 result.Add(new ItemCount(Item.Relics, 2));
-                result.Add(new ItemCount(Item.Medicine, 3));
+                result.Add(new ItemCount(Item.Weapons, 1));
                 break;
         }
 
