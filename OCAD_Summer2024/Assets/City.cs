@@ -29,15 +29,15 @@ public class City : Interactable
 {
     [Header("City Settings")]
     public CityEnum ID;
-    public string CityName = "Default City";
-    public string CityDialogue = "Welcome to our city!";
+    [HideInInspector] public string CityName = "Default City";
+    [HideInInspector] public string CityDialogue = "Welcome to our city!";
     public int CityLevel = 1;
 
     [Header("Upgrade Requirements")]
-    public Inventory Requirement;
+    [HideInInspector] public Inventory Requirement;
 
     [Header("Shop")]
-    public Shop CityShop;
+    [HideInInspector] public Shop CityShop;
 
     [Header("Level Up Visuals")]
     public GameObject level2Upgrade;
@@ -173,8 +173,8 @@ public class City : Interactable
         }
 
         // We only care about doing anything if the player actually has the required item.
-        if (pc.inventory.Has(item))
-        {            
+        if (pc.inventory.Count(item) > 0)
+        {                        
             // Remove item from player inventory and add it to city upgrade inventory.                        
             pc.inventory.Remove(item, 1);
 

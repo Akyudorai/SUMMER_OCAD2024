@@ -9,6 +9,8 @@ public class Inventory
 {
     [Header("Inventory")]
     [SerializeField] private List<ItemCount> CurrentInventory = new List<ItemCount>();
+    public int MaxInventory = 0;
+
 
     public void Set(List<ItemCount> result)
     {
@@ -17,8 +19,21 @@ public class Inventory
 
     // Add X items to the inventory
     public void Add(Item item, int count)
-    {
-        bool isNewItem = true;;
+    {       
+        int total = 0;
+        foreach (ItemCount ic in CurrentInventory)
+        {
+            total += ic.Quantity;
+        }
+
+        if (MaxInventory != 0 && total >= MaxInventory)
+        {
+            // MAX INVENTORY REACHED
+            return;
+        }
+
+
+        bool isNewItem = true;
         foreach(ItemCount ic in CurrentInventory)
         {
             if (ic.Resource == item)

@@ -29,7 +29,7 @@ public class Solaterra
         {
             case 1:
                 result.Add(new ItemCount(Item.Wood, 3));
-                result.Add(new ItemCount(Item.Wood, 3));
+                result.Add(new ItemCount(Item.Stone, 3));
                 break;
 
             case 2:
@@ -62,8 +62,8 @@ public class Solaterra
         {
             case 1:
                 result.Add(new ShopStock(Item.Wood, 3, 1));
-                result.Add(new ShopStock(Item.Wood, 3, 1));
-                result.Add(new ShopStock(Item.Wood, 3, 1));
+                result.Add(new ShopStock(Item.Cargo_3, 1, 1));
+                result.Add(new ShopStock(Item.Sails_3, 1, 1));
                 break;
 
             case 2:

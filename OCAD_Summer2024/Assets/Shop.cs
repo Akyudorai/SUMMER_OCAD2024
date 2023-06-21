@@ -43,7 +43,18 @@ public class Shop
             pc.Gold -= stock.Cost;
             //update the UI too
             pc.UpdateGoldText();
-            pc.inventory.Add(stock.Resource, 1);
+
+            switch (stock.Resource)
+            {
+                case Item.Cargo_1: pc.UpgradeCargo(1); break;
+                case Item.Cargo_2: pc.UpgradeCargo(2); break;
+                case Item.Cargo_3: pc.UpgradeCargo(3); break;
+                case Item.Sails_1: pc.UpgradeSpeed(1); break;
+                case Item.Sails_2: pc.UpgradeSpeed(2); break;
+                case Item.Sails_3: pc.UpgradeSpeed(3); break;
+                default: pc.inventory.Add(stock.Resource, 1); break;
+            }
+           
             stock.Quantity -= 1;
 
             InterfaceManager.Instance.RefreshShop(this);

@@ -16,9 +16,7 @@ public class PlayerController : MonoBehaviour
     public Inventory inventory;
     public float CurrentResources;
 
-    public GameObject goldText;
-    //public float MaxResources = 500.0f;
-
+    public GameObject goldText;    
 
     [Header("UI")]
     public TMP_Text PromptDisplay = null;
@@ -36,12 +34,20 @@ public class PlayerController : MonoBehaviour
     [Header("Interactable")]
     public Interactable target = null;
 
+    [Header("Upgrades")]
+    public int SpeedUpgrade = 0;
+    public int CargoUpgrade = 0;
+
     private void Awake()
     {
         if (Main == null) Main = this;        
         else Destroy(this.gameObject);        
 
         rb = GetComponent<Rigidbody>();
+
+        // Initialize Upgrades
+        UpgradeSpeed(0);
+        UpgradeCargo(0);
 
         //set UI text
         UpdateGoldText();
@@ -61,6 +67,18 @@ public class PlayerController : MonoBehaviour
             PromptDisplay.text = "";
             PromptDisplay.enabled = false;
         }
+    }
+
+    public void UpgradeSpeed(int level)
+    {
+        SpeedUpgrade = level;
+        Speed = 6 + (level * 4);
+    }
+
+    public void UpgradeCargo(int level)
+    {
+        CargoUpgrade = level;
+        inventory.MaxInventory = 7 + (level * 3);
     }
 
     private void SpeedLimiter()
