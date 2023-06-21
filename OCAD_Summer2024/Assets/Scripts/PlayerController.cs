@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     [Header("Resources")]
     public int Gold = 100;
     public Inventory inventory;
+    public InventoryManager inventoryManager;
+    public GameObject inventoryVisuals;
     public float CurrentResources;
 
     public GameObject goldText;
@@ -60,6 +62,16 @@ public class PlayerController : MonoBehaviour
             target.Interact(this);
             PromptDisplay.text = "";
             PromptDisplay.enabled = false;
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            //enable or disable
+            if (inventoryVisuals.activeSelf)
+            {
+                inventoryVisuals.SetActive(false);
+            }
+            else
+                inventoryVisuals.SetActive(true);
         }
     }
 

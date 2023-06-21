@@ -44,6 +44,9 @@ public class Shop
             //update the UI too
             pc.UpdateGoldText();
             pc.inventory.Add(stock.Resource, 1);
+            pc.inventoryManager.AddToSlot(stock.Resource.ToString());
+
+
             stock.Quantity -= 1;
 
             InterfaceManager.Instance.RefreshShop(this);
