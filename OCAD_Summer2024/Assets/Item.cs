@@ -10,8 +10,9 @@ public enum Item
     Leather,    
     Fur,
     Wool,
-    Food,
+    Meat,
     Water,
+    Fish,
 
     // L2
     Metal,
@@ -42,6 +43,7 @@ public enum Item
     Weapons,
     Relics,
     Chemicals,
+    Oil,
 
     Sails_3,    // Speed +3
     Cargo_3,    // Inventory +15
