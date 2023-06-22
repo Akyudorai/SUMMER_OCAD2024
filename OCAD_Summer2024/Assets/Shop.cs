@@ -13,6 +13,7 @@ public class Shop
     // Populate this list with whatever the city should trade regularly.
     public List<ShopStock> Inventory = new List<ShopStock>();
 
+    public List<ShopStock> Saleables = new List<ShopStock>();
 
     private void Tick()
     {
@@ -56,6 +57,7 @@ public class Shop
             }
            
             stock.Quantity -= 1;
+            pc.inventoryManager.AddToSlot(stock.Resource.ToString());
 
             InterfaceManager.Instance.RefreshShop(this);
         }

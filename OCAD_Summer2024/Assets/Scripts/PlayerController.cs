@@ -58,8 +58,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (InterfaceManager.Instance.DialogueActive) return;
-
+        //if (InterfaceManager.Instance.DialogueActive) return;
+        if (GameManager.IsPaused) return;
+        if (GameManager.IsShopping) return;
+        
         Motion();        
         SpeedLimiter();
 

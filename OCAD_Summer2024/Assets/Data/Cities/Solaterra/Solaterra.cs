@@ -61,7 +61,8 @@ public class Solaterra
         switch (i)
         {
             case 1:
-                result.Add(new ShopStock(Item.Wood, 3, 1));
+                result.Add(new ShopStock(Item.Wood, 50, 1));
+                result.Add(new ShopStock(Item.Stone, 50, 1));
                 result.Add(new ShopStock(Item.Cargo_3, 1, 1));
                 result.Add(new ShopStock(Item.Sails_3, 1, 1));
                 break;

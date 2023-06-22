@@ -37,7 +37,8 @@ public class CameraController : MonoBehaviour
 
     void LateUpdate()
     {
-        if (InterfaceManager.Instance.DialogueActive) return;
+        if (GameManager.IsPaused) return;
+        if (GameManager.IsShopping) return;
 
         UpdateCamera();
     }

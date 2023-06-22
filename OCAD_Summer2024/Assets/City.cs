@@ -187,6 +187,10 @@ public class City : Interactable
             // Check for an upgrade after everything is done.
             CheckUpgrade();
 
+            // Give the player some gold for successful import.
+            PlayerController.Main.Gold += 3;
+            PlayerController.Main.UpdateGoldText();
+
             // Refresh the Upgrade Panel.
             InterfaceManager.Instance.RefreshCityUpgrade(this);            
         }               
@@ -214,6 +218,7 @@ public class City : Interactable
     private void Upgrade()
     {
         Debug.Log("UPGRADING CITY TO NEXT LEVEL!");
+        GameManager.Instance.CheckForCompletion();
 
         // Increase the level
         CityLevel++;
@@ -244,9 +249,9 @@ public class City : Interactable
             default:
                 break;
         }
-        
 
-        //add visual indication        
+
+        //add visual indication                
 
         // TODO: Update the mesh
 
@@ -257,6 +262,7 @@ public class City : Interactable
 
     public override void Interact(PlayerController pc)
     {       
+        GameManager.IsPaused = true;
         InterfaceManager.Instance.ShowCityPanel(this);
     }
 }
