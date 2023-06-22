@@ -34,19 +34,19 @@ public class Novoria
             case 2:
                 result.Add(new ItemCount(Item.Stone, 3));
                 result.Add(new ItemCount(Item.Metal, 3));
-                result.Add(new ItemCount(Item.Gemstone, 1));
+                result.Add(new ItemCount(Item.Paper, 2));
                 break;
 
             case 3:
-                result.Add(new ItemCount(Item.Wood, 3));
-                result.Add(new ItemCount(Item.Wood, 3));
-                result.Add(new ItemCount(Item.Wood, 3));
+                result.Add(new ItemCount(Item.Glassware, 1));
+                result.Add(new ItemCount(Item.Metal, 3));
+                result.Add(new ItemCount(Item.Paper, 2));
                 break;
 
             case 4:
-                result.Add(new ItemCount(Item.Metal, 10));
-                result.Add(new ItemCount(Item.Gemstone, 5));
-                result.Add(new ItemCount(Item.Relics, 2));
+                result.Add(new ItemCount(Item.Metal, 6));
+                result.Add(new ItemCount(Item.Glassware, 2));
+                result.Add(new ItemCount(Item.Relics, 1));
                 break;
         }
 
@@ -61,30 +61,26 @@ public class Novoria
         {
             case 1:
                 result.Add(new ShopStock(Item.Meat, 3, 1));
-                result.Add(new ShopStock(Item.Fur, 3, 1));
-                result.Add(new ShopStock(Item.Leather, 3, 1));
+                result.Add(new ShopStock(Item.Leather, 3, 2));
                 break;
 
             case 2:
-                result.Add(new ShopStock(Item.Wood, 3, 1));
-                result.Add(new ShopStock(Item.Wood, 3, 1));
-                result.Add(new ShopStock(Item.Wood, 3, 1));
-                result.Add(new ShopStock(Item.Wood, 3, 1));
+                result.Add(new ShopStock(Item.Metal, 3, 2));
+                result.Add(new ShopStock(Item.Alcohol, 3, 3));
                 break;
 
             case 3:
-                result.Add(new ShopStock(Item.Wood, 3, 1));
-                result.Add(new ShopStock(Item.Wood, 3, 1));
-                result.Add(new ShopStock(Item.Wood, 3, 1));
-                result.Add(new ShopStock(Item.Wood, 3, 1));
+                result.Add(new ShopStock(Item.Metal, 3, 2));
+                result.Add(new ShopStock(Item.Alcohol, 3, 3));
+                result.Add(new ShopStock(Item.Porcelean, 3, 6));
+                result.Add(new ShopStock(Item.Machinery, 5, 6));
                 break;
 
             case 4:
-                result.Add(new ShopStock(Item.Wood, 3, 1));
-                result.Add(new ShopStock(Item.Wood, 3, 1));
-                result.Add(new ShopStock(Item.Wood, 3, 1));
-                result.Add(new ShopStock(Item.Wood, 3, 1));
-                result.Add(new ShopStock(Item.Wood, 3, 1));
+                result.Add(new ShopStock(Item.Porcelean, 3, 6));
+                result.Add(new ShopStock(Item.Machinery, 5, 6));
+                result.Add(new ShopStock(Item.Relics, 3, 8));
+                result.Add(new ShopStock(Item.Chemicals, 2, 10));
                 break;
         }
 
