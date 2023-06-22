@@ -28,7 +28,7 @@ public class Zemuria
         switch (i)
         {
             case 1:
-                result.Add(new ItemCount(Item.Wood, 2));
+                result.Add(new ItemCount(Item.Wool, 2));
                 result.Add(new ItemCount(Item.Leather, 5));
                 break;
 
