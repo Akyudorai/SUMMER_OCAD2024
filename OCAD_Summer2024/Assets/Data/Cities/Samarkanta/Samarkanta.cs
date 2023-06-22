@@ -27,26 +27,25 @@ public class Samarkanta
         switch (i)
         {
             case 1:
-                result.Add(new ItemCount(Item.Wood, 3));
-                result.Add(new ItemCount(Item.Wood, 3));
+                result.Add(new ItemCount(Item.Fur, 3));
+                result.Add(new ItemCount(Item.Wool, 5));
                 break;
 
             case 2:
-                result.Add(new ItemCount(Item.Wood, 3));
-                result.Add(new ItemCount(Item.Wood, 3));
-                result.Add(new ItemCount(Item.Wood, 3));
+                result.Add(new ItemCount(Item.Alcohol, 6));
+                result.Add(new ItemCount(Item.Cotton, 2));
                 break;
 
             case 3:
-                result.Add(new ItemCount(Item.Wood, 3));
-                result.Add(new ItemCount(Item.Wood, 3));
-                result.Add(new ItemCount(Item.Wood, 3));
+                result.Add(new ItemCount(Item.Fur, 3));
+                result.Add(new ItemCount(Item.Wool, 5));
+                result.Add(new ItemCount(Item.Cotton, 2));
                 break;
 
             case 4:
-                result.Add(new ItemCount(Item.Wood, 3));
-                result.Add(new ItemCount(Item.Wood, 3));
-                result.Add(new ItemCount(Item.Wood, 3));
+                result.Add(new ItemCount(Item.Fur, 6));
+                result.Add(new ItemCount(Item.Wool, 6));
+                result.Add(new ItemCount(Item.Cotton, 5));
                 break;
         }
 
