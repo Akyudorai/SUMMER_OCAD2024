@@ -28,26 +28,22 @@ public class Solaterra
         switch (i)
         {
             case 1:
-                result.Add(new ItemCount(Item.Wood, 3));
-                result.Add(new ItemCount(Item.Stone, 3));
+                result.Add(new ItemCount(Item.Fish, 3));
+                result.Add(new ItemCount(Item.Stone, 2));
                 break;
 
             case 2:
-                result.Add(new ItemCount(Item.Wood, 3));
-                result.Add(new ItemCount(Item.Wood, 3));
-                result.Add(new ItemCount(Item.Wood, 3));
+                result.Add(new ItemCount(Item.Metal, 3));
+                result.Add(new ItemCount(Item.Gemstone, 1));
                 break;
 
             case 3:
-                result.Add(new ItemCount(Item.Wood, 3));
-                result.Add(new ItemCount(Item.Wood, 3));
-                result.Add(new ItemCount(Item.Wood, 3));
+                result.Add(new ItemCount(Item.Metal, 10));
                 break;
 
             case 4:
-                result.Add(new ItemCount(Item.Wood, 3));
-                result.Add(new ItemCount(Item.Wood, 3));
-                result.Add(new ItemCount(Item.Wood, 3));
+                result.Add(new ItemCount(Item.Machinery, 4));
+                result.Add(new ItemCount(Item.Chemicals, 1));
                 break;
         }
 
@@ -61,32 +57,28 @@ public class Solaterra
         switch (i)
         {
             case 1:
-                result.Add(new ShopStock(Item.Wood, 50, 1));
-                result.Add(new ShopStock(Item.Stone, 50, 1));
-                result.Add(new ShopStock(Item.Cargo_3, 1, 1));
-                result.Add(new ShopStock(Item.Sails_3, 1, 1));
+                result.Add(new ShopStock(Item.Meat, 3, 2));
+                result.Add(new ShopStock(Item.Water, 5, 2));
                 break;
 
             case 2:
-                result.Add(new ShopStock(Item.Wood, 3, 1));
-                result.Add(new ShopStock(Item.Wood, 3, 1));
-                result.Add(new ShopStock(Item.Wood, 3, 1));
-                result.Add(new ShopStock(Item.Wood, 3, 1));
+                result.Add(new ShopStock(Item.Meat, 3, 2));
+                result.Add(new ShopStock(Item.Water, 5, 2));
+                result.Add(new ShopStock(Item.Cotton, 3, 1));
                 break;
 
             case 3:
-                result.Add(new ShopStock(Item.Wood, 3, 1));
-                result.Add(new ShopStock(Item.Wood, 3, 1));
-                result.Add(new ShopStock(Item.Wood, 3, 1));
-                result.Add(new ShopStock(Item.Wood, 3, 1));
+                result.Add(new ShopStock(Item.Water, 3, 2));
+                result.Add(new ShopStock(Item.Cotton, 3, 1));
+                result.Add(new ShopStock(Item.Medicine, 3, 5));
+                result.Add(new ShopStock(Item.Sails_2, 1, 13));
                 break;
 
             case 4:
-                result.Add(new ShopStock(Item.Wood, 3, 1));
-                result.Add(new ShopStock(Item.Wood, 3, 1));
-                result.Add(new ShopStock(Item.Wood, 3, 1));
-                result.Add(new ShopStock(Item.Wood, 3, 1));
-                result.Add(new ShopStock(Item.Wood, 3, 1));
+                result.Add(new ShopStock(Item.Water, 3, 2));
+                result.Add(new ShopStock(Item.Cotton, 3, 1));
+                result.Add(new ShopStock(Item.Medicine, 3, 5));
+                result.Add(new ShopStock(Item.Circuitry, 6, 8));
                 break;
         }
 

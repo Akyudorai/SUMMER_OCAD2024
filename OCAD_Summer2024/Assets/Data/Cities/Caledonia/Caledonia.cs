@@ -72,14 +72,14 @@ public class Caledonia
 
             case 3:
                 result.Add(new ShopStock(Item.Stone, 5, 3));
-                result.Add(new ShopStock(Item.Clothing, 3, 4));
+                result.Add(new ShopStock(Item.Clothing, 3, 5));
                 result.Add(new ShopStock(Item.Alcohol, 4, 5));
                 result.Add(new ShopStock(Item.Sails_2, 13, 1));
                 break;
 
             case 4:
                 result.Add(new ShopStock(Item.Stone, 5, 3));
-                result.Add(new ShopStock(Item.Clothing, 3, 4));
+                result.Add(new ShopStock(Item.Clothing, 3, 5));
                 result.Add(new ShopStock(Item.Alcohol, 4, 5));
                 result.Add(new ShopStock(Item.Porcelean, 4, 6));
                 result.Add(new ShopStock(Item.Weapons, 6, 8));
