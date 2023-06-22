@@ -178,6 +178,9 @@ public class City : Interactable
             // Remove item from player inventory and add it to city upgrade inventory.                        
             pc.inventory.Remove(item, 1);
 
+            //remove from visual inventory too
+            pc.inventoryManager.RemoveFromSlot(item.ToString());
+
             // Remove one from the requirement
             Requirement.Remove(item, 1);
 

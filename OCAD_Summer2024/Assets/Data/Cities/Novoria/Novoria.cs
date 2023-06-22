@@ -60,7 +60,7 @@ public class Novoria
         switch (i)
         {
             case 1:
-                result.Add(new ShopStock(Item.Food, 3, 1));
+                result.Add(new ShopStock(Item.Meat, 3, 1));
                 result.Add(new ShopStock(Item.Fur, 3, 1));
                 result.Add(new ShopStock(Item.Leather, 3, 1));
                 break;
